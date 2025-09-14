@@ -7,14 +7,19 @@ console.log("%cJS Lab Connected — Start completing the TODOs!", "font-weight:b
 // Task 2.1 — declare & reassign
 // Create let course = "CIS101"; display it usinng console.log(course), reassign to "CIS102"; display it again.
 // write code here
+let course = "CIS101";
+console.log(course);
+course = "CIS102";
+console.log(course);
 
 
 // Task 2.2 — const safety
 // Create const SCHOOL = "MyCollege"; then TRY to reassign it and observe the Console error. Add a comment explaining    why  reassignment fails.
 // NOTE: For now, keep the reassignment line commented so the file runs without errors.
-// const SCHOOL = "MyCollege";
-// SCHOOL = "OtherCollege"; // <-- Uncomment to see the error, then re-comment after testing
-
+const SCHOOL = "MyCollege";
+//SCHOOL = "OtherCollege"; // <-- Uncomment to see the error, then re-comment after testing
+// Reassignment fails because constants cannot be changed 
+console.log(SCHOOL);
 
 // ==========================
 // TODO-3: ARITHMETIC & TYPES
@@ -23,12 +28,20 @@ console.log("%cJS Lab Connected — Start completing the TODOs!", "font-weight:b
 // Task 3.1 — arithmetic basics
 // Given let x = 8, y = 3; log x+y, x-y, x*y, x/y, x%y.
 // write code here
-
+let x = 8, y = 3;
+console.log(x + y);
+console.log(x - y);
+console.log(x * y);
+console.log(x / y);
+console.log(x % y);
 
 // Task 3.2 — number vs string
 // Display results of "2" + 3, 2 + "3", and 2 + 3. Add a short comment: why do the first two concatenate?
 // write code here
-
+console.log("2" + 3);
+console.log(2 + "3");
+console.log(2 + 3);
+// JavaScript converts the other operand to a string as well.
 
 // Read chapter 4 in zyBooks: Compound Assignment Operators
 
@@ -45,7 +58,15 @@ console.log("%cJS Lab Connected — Start completing the TODOs!", "font-weight:b
 //         - "Young" if age is between 13 and 35
 //         - "Aged" if age > 35
 // write code here
+let age= prompt("Enter your age:");
 
+if (age < 13) {
+    console.log("Child");
+} else if (age >= 13 && age <= 35) {
+    console.log("Young");
+} else {
+    console.log("Aged");
+}
 
 // Task 4.2 — Switch statement
 // Create a variable let day = "Mon".
@@ -54,10 +75,34 @@ console.log("%cJS Lab Connected — Start completing the TODOs!", "font-weight:b
 //         - If it is "Sat" or "Sun", log "weekend".
 //         - For any other value, log "unknown".
 // write code here
+let day = "Mon";
+switch (day) {
+    case "Mon":
+      console.log("weekday");
+        break;
+    case "Tue":
+      console.log("weekday");
+        break;
+    case "Wed":
+      console.log("weekday");
+        break;
+    case "Thu":
+      console.log("weekday");
+        break;
+    case "Fri":
+        console.log("weekday");
+        break;
+    case "Sat":
+      console.log("weekend");
+        break;
+    case "Sun":
+        console.log("weekend");
+        break;
+    default:
+        console.log("unknown");
+}
+// Read Chapter 4 in zyBooks: Logical Operators
 
-// Read Chapter 4 in zyBooks: Conditional (ternary) operator
-
-// ===============
 // TODO-5: LOOPS
 // ===============
 
