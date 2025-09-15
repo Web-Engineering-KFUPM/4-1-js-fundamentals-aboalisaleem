@@ -140,11 +140,14 @@ do {
 // Task 6.1 — pure function + return
 // Make a function add(a,b){ return a+b; } display the result of add(2,5).
 // write code here
-
+function add(a, b) { return a + b; }
+console.log(add(2,5));
 
 // Task 6.2 — Arrow functions
 // Make an arrow function; const cube = n => n*n*n; cube(3)
 // write code here
+const cube = n => n*n*n;
+console.log(cube(3));
 
 
 // =================================
@@ -154,6 +157,16 @@ do {
 // Task 7.1 — var vs let scope
 // Declare var a = 1; let b = 2 inside a block { },  then try displaying both outside the block; observe differences.
 // write code here
+var a = 1;
+let b = 2;
+{
+    var a = 3;
+    let b = 4;
+    console.log(a); // 3
+    console.log(b); // 4
+}
+console.log(a); // 3
+console.log(b); // 2
 
 
 // ==================
@@ -163,6 +176,12 @@ do {
 // Task 8.1 — create & mutate
 // TODO: let nums = [3,1,4]; then push(1), unshift(9), pop(); log final array and length.
 // write code here
+let nums = [3, 1, 4];
+nums.push(1);
+nums.unshift(9);
+nums.pop();
+console.log(nums);
+console.log(nums.length);
 
 
 // End of manual — great job! Keep this file open and work task by task.
